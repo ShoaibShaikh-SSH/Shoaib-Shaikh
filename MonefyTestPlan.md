@@ -16,9 +16,12 @@ So, our focus areas will be:
  - User doesn't have access to pro features
  - Design of the app is responsive and looks the same on devices with a different form 
  
+**Testing Priority**: Charters are stacked up according to the priority 
+- App installation/ Update is what user encounters in case of this app. Also any installation failure would block user from using the app & potantially hamper the brand.
+- Adding Income / Expense are core features of the app, rest all are features complementing the core.
  
-## 1 Install and update application
-### 1.1 Install & Launch application
+## 1 Install and update application (Planned time: 2 hours)
+### 1.1 Install & Launch application 
 |#|target| Step | Information to discover |
 | ------ | ------ | ------ | ------ |
 |1| App installation| Install Monefy app from play Store | Successfull/Unsuccessful app installation |
@@ -37,7 +40,7 @@ So, our focus areas will be:
 | ------ | ------ | ------ | ------ |
 |1|PRO features | Check PRO version features availability after app update| PRO version features availability after update |
 
-## 2 Expense / Income
+## 2 Expense / Income (Planned time: 4 hours)
 ### 2.1 Adding new income
 |#|target| Step | Information to discover |
 | ------ | ------ | ------ | ------ |
@@ -68,8 +71,45 @@ Also, we can test other features:
 We should check that pro features aren't available until user upgrades to pro version
 List of these features:
 1. Adding new categories
-2. Create accounts in different currencies
-3. Scheduled income/expenses records
-4. Synchronization with Dropbox and Google Drive
-5. Passcode protection
-6. Dark theme
+2. Scheduled income/expenses records
+3. Synchronization with Dropbox and Google Drive
+
+## 3 Testing on different devices (Planned time: 1.5 hours)
+We need to check that the app is responsive and looks the same on devices with a different form factor.
+- Nexus 6P (Viewport 412 x 732)
+- Samsung Galaxy S7 (Viewport 360 x 640)
+- Tablets ex: Samsung Galaxy Tab 10 (Viewport 800 x 1280)
+This is a sample set of devices selected based on the viewport to ensure we test the app on both ends of the spectrum. Additional factor while choosing devices could be the user base using devices. 
+
+## 4 Localization testing (Planned time: 3 hours)
+Monefy support several languages: English, Bulgarian, Croatian, German, Italian, Malay, Polish, Portuguese, Russian, Simplified Chinese, Spanish, Turkish, Ukrainian.
+So we need to check that everything is translated correctly in chosen languages when we choose a language in the app settings.
+
+## 5 Device specific tests (Planned time: 1 hours)
+We need to check how Monefy app behave:
+- if there is an incoming call/message
+- if a device goes to/from sleeping mode, or when a screen is locked
+- if a device is charging, or battery is low
+
+## 6 Network testing (Planned time: 1 hours)
+We need to check how Monefy app behave:
+ - when it connected to the Internet through Wi-Fi
+ - when it connected to the Internet through 4G
+ - when it connected to the Internet through 3G
+ - when it out of network reach
+ - App behaviour after app regains internet connectivity
+
+## 7 Third party Integration testing (for PRO version) (Planned time: 2 hours)
+According to Monefy feature list, in its PRO version Synchronization with Google Drive and Dropbox is available, which allows users to use the same account on several devices. 
+
+|#|target| Step | Information to discover |
+| ------ | ------ | ------ | ------ |
+|1|Third party integration| Open Monefy on the device A| Monefy app is opened|
+|2|Third party integration| Enable synchronization with Google Drive| Synchronization is enabled|
+|3|Third party integration|Open Monefy on the device B and use the same account as at device A| Monefy app is opened under the same account|
+|4|Third party integration|Add some expenses| Expenses are added, changes are displayed on the main screen |
+|5|Third party integration|Check how expenses are displayed in the app on device A| Expenses are synchronized and displayed the same way as on device B|
+
+## Findings:
+
+## Risks to mitigate:
