@@ -1,0 +1,5 @@
+com/petstore/tests/TestBase.class
+com/petstore/util/UtilityMethods.class
+com/petstore/tests/StoreTest.class
+com/petstore/tests/PetTest.class
+com/petstore/tests/UserTest.class
